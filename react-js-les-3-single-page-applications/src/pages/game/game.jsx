@@ -9,8 +9,8 @@ const Game = () => {
     if (chosenLocation) {
         text = (
             <p>
-                You've chosen to practice the capitals in {chosenLocation}. <Link to={'location'}>Click
-                here</Link>&nbsp; to change the location.
+                You've chosen to practice the capitals in {chosenLocation}.&nbsp;
+                <Link to={'location'}>Click here</Link> to change the location.
             </p>
         )
     } else {
