@@ -3,6 +3,7 @@ import GameConfig from "./gameConfig.jsx";
 import {useParams} from "react-router-dom";
 import {getMaxNumberOfQuestionsForLocation, getQuestions} from "../../../API/capitalsAPI.js";
 import Question from "./question.jsx";
+import Result from "./result.jsx";
 
 const Play = () => {
     const [nbQuestions, setNbQuestions] = useState(5)
@@ -29,8 +30,12 @@ const Play = () => {
         <>
             <GameConfig nbQuestions={nbQuestions} maxQuestions={maxQuestions} setNbQuestions={setNbQuestions}
                         startGame={startGame}/>
-            {questions && <Question score={score} currentQuestion={currentQuestion} {...questions[currentQuestion]}
-                                    nbQuestions={questions.length} answerQuestion={answerQuestion}/>}
+            {questions &&
+                currentQuestion < questions.length &&
+                <Question score={score} currentQuestion={currentQuestion} {...questions[currentQuestion]}
+                          nbQuestions={questions.length} answerQuestion={answerQuestion}/>}
+
+            {currentQuestion === questions?.length && <Result score={score} nbQuestions={questions.length} location={location}/>}
         </>
     )
 }

@@ -35,7 +35,7 @@ const GameConfig = ({nbQuestions, maxQuestions, setNbQuestions, startGame}) => {
 
     return (
         <>
-            {nbQuestions !== maxQuestions && nbConfig}
+            {maxQuestions !== 5 && nbConfig}
             <Row>
                 <div className="d-grid gap-2">
                     <Button variant="primary" onClick={startGame}>
