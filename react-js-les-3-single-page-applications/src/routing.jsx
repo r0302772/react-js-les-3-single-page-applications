@@ -3,7 +3,7 @@ import Home from "./pages/home/home.jsx";
 import Game from "./pages/game/game.jsx";
 import Highscores from "./pages/highscores/highscores.jsx";
 import ChooseLocation from "./pages/game/chooseLocation.jsx";
-import Play from "./pages/game/play.jsx";
+import Play from "./pages/game/play/play.jsx";
 
 const Routing = () => {
     return (
